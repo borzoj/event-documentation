@@ -1,0 +1,36 @@
+asyncapi: '2.6.0'
+id: 'urn:example.com:marc-api'
+tags: 
+  - name: 'order'
+    description: 'Order-related events'
+info:
+  title: 'Marc API'
+  version: '1.0.0'
+  description: 'Marc API allows patients to place orders'
+  contact:
+    name: 'Michal'
+    url: 'https://www.zavamed.com/'
+    email: 'michal.jaworski@zavamed.com'
+defaultContentType: application/json
+channels:
+  order/placed:
+    publish:
+      operationId: 'publishOrderPlaced'
+      message:
+        name: OrderPlaced
+        messageId: 'urn:example.com:message:OrderPlaced'
+        payload:
+          type: object
+          properties:
+            orderId:
+              type: string
+              description: The unique identifier of the placed order.
+      bindings:
+        aws:
+          eventSourceArn: arn:aws:events:eu-west-1:197611495826:event-bus/prd-encounters-bus
+servers:
+  eventbridge:
+    url: arn:aws:events:eu-west-1:197611495826:event-bus/prd-encounters-bus
+    protocol: aws-eventbridge
+
+

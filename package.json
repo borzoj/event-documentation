@@ -1,0 +1,22 @@
+{
+  "name": "event-documentation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borzoj/event-documentation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/borzoj/event-documentation/issues"
+  },
+  "homepage": "https://github.com/borzoj/event-documentation#readme",
+  "dependencies": {
+    "@asyncapi/cli": "^0.40.4"
+  }
+}
