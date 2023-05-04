@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-docs": "ag specifications/asyncapi.yaml @asyncapi/html-template -o build/docs"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/borzoj/event-documentation#readme",
   "dependencies": {
-    "@asyncapi/cli": "^0.40.4"
+    "@asyncapi/cli": "^0.40.4",
+    "@asyncapi/generator": "^1.9.18"
   }
 }
